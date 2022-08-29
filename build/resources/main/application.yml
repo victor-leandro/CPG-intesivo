@@ -1,0 +1,25 @@
+micronaut:
+  application:
+    name: CPA-intesivo
+datasources:
+  default:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url:  jdbc:mysql://localhost:3310/exercicioJpaDB
+    username: user
+    password: 123456
+    db-type: mysql
+    schema-generate: UPDATE
+    dialect: MYSQL
+netty:
+  default:
+    allocator:
+      max-order: 3
+jpa:
+  default:
+    entity-scan:
+      packages: com.exercicio.domain
+    properties:
+       hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true
